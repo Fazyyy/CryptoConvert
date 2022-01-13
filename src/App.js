@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Newsfeed from './components/Newsfeed'
+import CurrencyConverter from './components/CurrencyConverter'
+import Homebg from './assets/1112880.jpg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ backgroundImage: `url(${Homebg})` }}>
+      <div className="container">
+        <div className="row">
+          <div className="double-column">
+            <CurrencyConverter />
+          </div>
+          <div className="column">
+            <Newsfeed />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
